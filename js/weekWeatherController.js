@@ -8,7 +8,7 @@ $(function(){
 
     init();
     clickEventHandler();
-    
+
     function init(){
       successHandle();
       painWeekWeatherData();
@@ -84,6 +84,9 @@ $(function(){
         $('#js-weather-datail-table').append(content);
       });
     }
+
+    analysisWeatherChart();
+
 
   }).fail(function(){
     failHandle();

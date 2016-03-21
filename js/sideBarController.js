@@ -7,4 +7,6 @@
     $('#js-sidebar-menu li').eq(index).addClass('active');
     $('#js-main>.main-content').hide();
     $('#'+state).show();
+
+
   }
