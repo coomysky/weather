@@ -4,14 +4,56 @@ function weatherData(){
 
     this.Service = {
       weekWeatherData:weekWeatherData,
-      getWeekData:getWeekData
+      getWeekData:getWeekData,
+      queryWeatherData:queryWeatherData,
+      getAnayChartData:getAnayChartData
     };
 
     return this.Service;
 
+    function queryWeatherData(){
+      return $.get( 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Taipei,TW&cnt=10&mode=json&appid=b1b15e88fa797225412429c1c50c122a');
+    }
+
     function weekWeatherData(){
       return $.get( 'http://api.openweathermap.org/data/2.5/forecast?q=Taipei,TW&appid=b1b15e88fa797225412429c1c50c122a');
     }
+
+    function getAnayChartData(items){
+      var data = {
+        xAxis : [],
+        temp:{
+          day:[],
+          max:[],
+          min:[]
+        },
+        rain:[],
+        clouds:[]
+      };
+
+      _.map(items,function(d){
+        var day = getUtcDateAndMonth(d.dt);
+        data.xAxis.push(day);
+        data.temp.day.push(d.temp.day);
+        data.temp.max.push(d.temp.max);
+        data.temp.min.push(d.temp.min);
+        data.rain.push(d.rain);
+        data.clouds.push(d.clouds);
+      });
+
+      return data;
+
+    }
+
+    function getUtcDateAndMonth(utc){
+      var date = new Date(utc* 1000);
+      var month = date.getUTCMonth()+1;
+      var day = date.getUTCDate();
+
+      return month+' /'+day;
+    }
+
+
 
     function getWeekData(lists){
       var week=[];
