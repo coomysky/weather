@@ -6,11 +6,9 @@ $(function(){
 
     var week = data.getWeekData(res.list);
 
-
     init();
     clickEventHandler();
-
-
+    
     function init(){
       successHandle();
       painWeekWeatherData();
