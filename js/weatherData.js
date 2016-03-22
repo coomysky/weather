@@ -12,11 +12,11 @@ function weatherData(){
     return this.Service;
 
     function queryWeatherData(){
-      return $.get( 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Taipei,TW&units=metric&cnt=10&mode=json&appid=b1b15e88fa797225412429c1c50c122a');
+      return $.get( 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Taipei,TW&units=metric&cnt=10&mode=json&appid=7cd96eb82151316259beeeee9d2fe046');
     }
 
     function weekWeatherData(){
-      return $.get( 'http://api.openweathermap.org/data/2.5/forecast?q=Taipei,TW&units=metric&appid=b1b15e88fa797225412429c1c50c122a');
+      return $.get( 'http://api.openweathermap.org/data/2.5/forecast?q=Taipei,TW&units=metric&appid=7cd96eb82151316259beeeee9d2fe046');
     }
 
     function getAnayChartData(items){

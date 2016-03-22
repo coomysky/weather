@@ -13,10 +13,7 @@ function analysisWeatherChart(){
              type: 'spline'
          },
          title: {
-             text: 'Monthly Average Temperature'
-         },
-         subtitle: {
-             text: 'Source: WorldClimate.com'
+             text: 'Temperature'
          },
          xAxis: {
              categories: chart_data.xAxis
@@ -71,21 +68,18 @@ function analysisWeatherChart(){
               type: 'spline'
           },
           title: {
-              text: 'Monthly Average Temperature'
-          },
-          subtitle: {
-              text: 'Source: WorldClimate.com'
+              text: '降雨量'
           },
           xAxis: {
               categories: chart_data.xAxis
           },
           yAxis: {
               title: {
-                  text: 'Temperature'
+                  text: '降雨量'
               },
               labels: {
                   formatter: function () {
-                      return this.value + '°';
+                      return this.value + 'mm';
                   }
               }
           },
@@ -117,21 +111,18 @@ function analysisWeatherChart(){
                type: 'spline'
            },
            title: {
-               text: 'Monthly Average Temperature'
-           },
-           subtitle: {
-               text: 'Source: WorldClimate.com'
+               text: 'Clouds'
            },
            xAxis: {
                categories: chart_data.xAxis
            },
            yAxis: {
                title: {
-                   text: 'Temperature'
+                   text: '含蓋率'
                },
                labels: {
                    formatter: function () {
-                       return this.value + '°';
+                       return this.value + '％';
                    }
                }
            },

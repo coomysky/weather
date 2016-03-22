@@ -78,9 +78,9 @@ function weekWeatherController(){
         var content = '<tr>'+
         '<td>'+info.time+'</td>'+
         '<td>'+info.weather[0].main+'</td>'+
-        '<td>'+info.wind.speed+'</td>'+
-        '<td>'+info.main.temp+'</td>'+
-        '<td>'+info.clouds.all+'</td>'+
+        '<td>'+info.wind.speed+' m/s</td>'+
+        '<td>'+info.main.temp+' °C</td>'+
+        '<td>'+info.clouds.all+' %</td>'+
         '</tr>';
         $('#js-weather-datail-table').append(content);
       });
