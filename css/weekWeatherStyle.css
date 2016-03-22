@@ -12,9 +12,12 @@
 }
 
 .weather-state.-Mist{
-  background-position: -120px -300px;
+  background-position: -700px -170px;
 }
 
+.weather-state.-Clouds{
+  background-position: -120px -300px;
+}
 
 .weather-state.-Snow{
 
