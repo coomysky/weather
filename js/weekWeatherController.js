@@ -1,5 +1,5 @@
 'use strict';
-$(function(){
+function weekWeatherController(){
   var data = new weatherData();
 
   data.weekWeatherData().success(function(res){
@@ -8,7 +8,7 @@ $(function(){
 
     init();
     clickEventHandler();
-    
+
     function init(){
       successHandle();
       painWeekWeatherData();
@@ -38,6 +38,7 @@ $(function(){
         painWeatherData(4);
         painWeatherActive(5);
       });
+
     }
 
     function painWeekWeatherData(){
@@ -99,4 +100,4 @@ $(function(){
     $('#js-data-fail').show();
   }
 
-});
+}
